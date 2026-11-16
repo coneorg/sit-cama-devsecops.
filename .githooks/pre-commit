@@ -1,0 +1,7 @@
+#!/bin/sh
+echo "--> Shift-Left: revisando secretos con Gitleaks..."
+if ! gitleaks git --pre-commit --staged --redact --verbose; then
+  echo "ERROR: se detectaron posibles secretos. Commit cancelado."
+  exit 1
+fi
+echo "OK: sin secretos detectados."

@@ -1,0 +1,30 @@
+{
+  "name": "sit-cama-backend",
+  "version": "1.0.0",
+  "description": "Repositorio del taller de Infraestructura DevSecOps.",
+  "main": "src/server.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node --test",
+    "start": "node src/server.js",
+    "test:coverage": "node --test --experimental-test-coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoseConejo23/sit-cama-devsecops..git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/JoseConejo23/sit-cama-devsecops./issues"
+  },
+  "homepage": "https://github.com/JoseConejo23/sit-cama-devsecops.#readme",
+  "private": "true",
+  "dependencies": {
+    "express": "^5.3.0"
+  }
+}
