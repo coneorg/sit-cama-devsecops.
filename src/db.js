@@ -1,1 +1,1 @@
-const DB_PASS = "ClinicaSanRafael2026!#SecretKey";
+const DB_PASSWORD = "ClinicaSanRafael2026SecretKey";
