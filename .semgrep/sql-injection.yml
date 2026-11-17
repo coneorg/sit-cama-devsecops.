@@ -1,0 +1,20 @@
+rules:
+  - id: sit-cama-sql-concatenacion
+    languages: [javascript, typescript]
+    severity: ERROR
+    message: >-
+      Consulta SQL construida con datos de la peticion HTTP sin parametrizar
+      (inyeccion SQL, OWASP A03:2021). Usar consultas parametrizadas.
+    metadata:
+      category: security
+      cwe: "CWE-89: SQL Injection"
+      owasp: "A03:2021 - Injection"
+    mode: taint
+    pattern-sources:
+      - pattern: req.query
+      - pattern: req.body
+      - pattern: req.params
+    pattern-sinks:
+      - patterns:
+          - pattern: $DB.query($SQL, ...)
+          - focus-metavariable: $SQL

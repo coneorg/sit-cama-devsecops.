@@ -69,7 +69,7 @@ jobs:
       - name: Analisis SAST (falla con severidad ERROR)
         env:
           SEMGREP_SEND_METRICS: "off"
-        run: semgrep scan --config p/default --severity ERROR --error .
+        run: semgrep scan --config p/default --config .semgrep/ --severity ERROR --error .
 
   sca:
     name: SCA (Trivy)
